@@ -1,4 +1,4 @@
-const InputMenu = () => {
+const InputMenu = ({count,setCount}) => {
   return (
     <div className=" flex gap-2">
       <div className="w-full border ring rounded-xl ring-bg-slate-200 p-2">
@@ -8,6 +8,8 @@ const InputMenu = () => {
         min={1}
         max={30}
         defaultValue={1}
+        value={count}
+        onChange={(e) =>setCount(e.target.value) }
       />
       </div>
     </div>
